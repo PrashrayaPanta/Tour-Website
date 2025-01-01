@@ -1,0 +1,76 @@
+@use "../Abstract/variables";
+
+.composition{
+
+    position:relative;
+
+
+        &__photo{
+
+            width:55%;
+            box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.4);
+            border-radius: 12px;
+            position: absolute;
+            z-index:1;
+            transition: all 0.3s;
+            z-index:10;
+
+            //spacin between the elemenyt and outline(border)
+            outline-offset: 1rem;
+
+            &--p1{
+
+                left: -3rem;
+                top:0rem;
+                
+
+            }
+            &--p2{
+
+                right: 0;
+                top:10rem;
+        
+                
+
+            }
+
+
+            &--p3{
+
+                bottom: 0;
+                top:20rem;
+                left:-3rem;
+            }
+
+
+            &:hover{
+
+                outline: 1rem solid variables.$color-primary-light;
+
+                transform: scale(1.05) translateY(-0.5rem);
+                box-shadow: 0 2.5rem 4rem rgba(variables.$color-black, 0.2);
+                z-index: 20;
+
+            }
+
+
+         
+
+
+        }
+
+        &:hover &__photo:not(:hover){
+
+
+            transform: scale(0.98);
+
+
+        }
+
+
+        //composition:hover composition_photo:not(:hover)
+
+
+
+
+}

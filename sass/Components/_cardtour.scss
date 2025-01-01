@@ -1,0 +1,241 @@
+
+@use "../Abstract/variables";
+
+
+
+.card{
+
+    //functionaloity
+
+
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    position: relative;
+
+    height:50rem;
+
+
+    &__side{
+
+        // background-color: orangered;
+
+        height:50rem;
+
+        transition: all 0.8s ease;
+
+        position: absolute;
+
+        top:0;
+
+        left:0;
+
+        width: 100%;
+
+        backface-visibility: hidden;
+
+
+        border-radius:3px;
+
+        overflow: hidden;
+
+        box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.15);
+
+
+
+
+        &--front{
+
+            background-color: orangered;
+
+        }
+
+        &--back{
+
+            // background-color: green;
+            transform: rotateY(180deg);
+
+
+            &-1{
+
+                    background-image: linear-gradient(to right bottom, variables.$color-secondary-light, variables.$color-secondary-dark);
+
+            }
+
+
+            &-2{
+
+                background-image: linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary-dark);
+
+
+            }
+
+
+            &-3{
+
+                background-image: linear-gradient(to right bottom, variables.$color-tertairy-light, variables.$color-tertairy-dark);
+
+            }
+
+
+        }
+
+    }
+
+
+   
+
+  
+
+    &:hover &__side--front{
+
+        transform: rotateY(-180deg);
+    }
+
+
+    &:hover &__side--back{
+
+        transform: rotateY(0deg);
+    }
+
+    //Front side styling
+    &__picture{
+
+        background-size: cover;
+        height:23rem;
+        background-blend-mode: screen;
+        --webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+        &--1{
+
+            background-image: linear-gradient(to right bottom, variables.$color-secondary-light, variables.$color-secondary-dark),  url("../../images/nat-5.jpg");
+
+        } 
+        &--2{
+
+            background-image: linear-gradient(to right bottom, variables.$color-primary-light, variables.$color-primary-dark),
+            url("../../images/nat-6.jpg");
+
+        } 
+        
+        &--3{
+
+            background-image: linear-gradient(to right bottom, variables.$color-tertairy-light, variables.$color-tertairy-dark), url("../../images/nat-7.jpg");
+
+        }
+
+
+    }
+
+    &__heading{
+
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: variables.$color-white;
+        position: absolute;
+        text-align: right;
+        top:15rem;
+        left:7rem;
+        width:75%;
+      
+    }
+
+    &__heading-span{
+        padding: 0.5rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1{
+
+            background-image: linear-gradient(to right bottom, rgba(variables.$color-secondary-light, 0.85), rgba(variables.$color-secondary-dark, 0.85));
+        }
+
+    }
+
+    &__details{
+
+
+        padding: 3rem;
+
+        ul {
+            // background-color: blue;
+            list-style-type: none;
+            width:80%;
+            // background-color: blue;
+            margin:0 auto;
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                // background-color: blue;
+                padding: 1rem;
+
+
+                &:not(:last-child){
+                    border-bottom: 1px solid variables.$color-grey-light;
+                }
+
+            }
+
+
+        }
+
+
+
+    }
+
+
+    &__cta{
+
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        // background-color: red;
+        text-align: center;
+        
+
+
+
+    }
+
+
+    &__price-box{
+
+        // background-color: red;
+
+        text-align: center;
+
+        color:variables.$color-white;
+
+        margin-bottom: 8rem;
+
+
+    }
+
+    &__price-only{
+
+        font-size: 1.4rem;
+        text-transform: uppercase;
+
+    }
+
+    &__price-value{
+
+        font-size: 6rem;
+        font-weight: 100;
+
+
+    }
+
+
+}
+
+
+// .card:hover .card_side{
+
+
+// }
+
+// .card:hover .card__side{

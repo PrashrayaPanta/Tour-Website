@@ -1,0 +1,33 @@
+@keyframes MoveInRightFromLeft {
+  
+    0%{
+  
+      transform: translateX(-6.25rem);
+  
+    }
+  
+    100%{
+  
+      transform: translateX(0px);
+  
+    }
+    
+  }
+  
+  
+  @keyframes MoveInLeftFromRight {
+  
+    0%{
+  
+      transform: translateX(1rem);
+  
+    }
+  
+    100%{
+  
+        transform: translateX(0rem);
+    }
+  
+  
+    
+  }
