@@ -24,7 +24,7 @@
 @use "./Layout/_header.scss";
 
 
-@use "./Components/_card.scss";
+// @use "./Components/_card.scss";
 
 
 @use "./Layout/_grid.scss";
@@ -38,6 +38,10 @@
 
 
 @use "./Components/cardtour";
+
+@use "./Components/form";
+
+
 
 
 

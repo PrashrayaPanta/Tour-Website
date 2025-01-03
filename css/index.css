@@ -92,6 +92,19 @@ body {
   padding: 25rem 0 50rem 0;
 }
 
+.booking-container {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 50%, transparent 100%), url("../../images/nat-10.jpg");
+  box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+  background-size: 100%;
+  height: 50rem;
+  border-radius: 4px;
+}
+
+.leftpart-booking-container {
+  width: 50%;
+  padding: 5rem;
+}
+
 .btn {
   padding: 0.625rem 1.25rem;
   display: inline-block;
@@ -384,6 +397,46 @@ body {
 .card__price-value {
   font-size: 6rem;
   font-weight: 100;
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.form__input {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  font-family: inherit;
+  color: inherit;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 100%;
+  display: block;
+}
+.form__input::-webkit-input-placeholder {
+  color: #999;
+}
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  border-bottom: 3px solid #28b485;
+}
+.form__input:focus:invalid {
+  border-bottom: 3px solid #8B8000;
+}
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
 }
 
 .card-container {
