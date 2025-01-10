@@ -321,6 +321,7 @@
   
   
             <div class="leftpart-booking-container">
+
               <div class="u-margin-bottom-medium">
                 <h2 class="heading-secondary">
                   Start Booking Now
@@ -347,13 +348,51 @@
                     <label for="email" class="form__label">Email</label>
   
                   </div>
+
+
+                  <div class="form__group">
   
+                    <div class="form__radio-group">
+                      <input type="radio" class="form__radio-input" id="small" name="size">
+
+                       <!-- //we cannot style the radio through css so we need to ADD CERTAIN ELEMENT INSIDE LABEL ELEMENT -->
+                      <label for="small" class="form__radio-label">
+                        <span class="form__radio-button"></span>
+                        Small tour Group
+                      </label>
+                    </div>
+  
+                    <div class="form__radio-group">
+                      <input type="radio" class="form__radio-input" id="large" name="size">
+                      <!-- TO STYLE THE RADIO THE SPAN IS ADDED ISNODE LABEL ELEMENT -->
+                      <label for="large" class="form__radio-label">
+                        <span class="form__radio-button"></span>
+                        Large tour Group
+                      </label>
+                    </div>
+
+
+
+
+                  </div>
+
+
+                  <div class="form-group">
+                    <button class="btn btn--green">
+
+                        Next Step &rarr;
+
+                    </button>
+                  
+                  </div>
   
   
                 </form>
   
   
               </div>
+
+
   
   
   
