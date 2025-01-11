@@ -1,11 +1,7 @@
-
 @use "Abstract/_variables";
 
-
-@use  "Abstract/_mixins";
+@use "Abstract/_mixins";
 @use "Abstract/_functions";
-
-
 
 //Dont use @use url(path) use this in normal css
 @use "./Base/_animate.scss";
@@ -13,66 +9,31 @@
 @use "./Base/_typography.scss";
 @use "./Base/_utilities.scss";
 
-
-
-@use "./Pages/_home.scss";
-
+// @use "./Components/_card.scss";
 
 @use "./Components/_button.scss";
 
-
-@use "./Layout/_header.scss";
-
-
-// @use "./Components/_card.scss";
-
-
-@use "./Layout/_grid.scss";
-
-
-
 @use "./Components/composition";
 
-
 @use "./Components/feature-box";
-
 
 @use "./Components/cardtour";
 
 @use "./Components/form";
 
+@use "./Layout/_header.scss";
 
+@use "./Layout/_footer";
 
+@use "./Layout/_grid.scss";
 
+@use "./Pages/_home.scss";
 
-.card-container{
-
+.card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 4px;
-  row-gap:4px;
-
-
+  row-gap: 4px;
 }
 
-
-
-
-
-
-
-
-  
-
-
-  
-  
- 
-  
-
-  
-  
-  
-  
-  /*# sourceMappingURL=index.css.map */
-  
+/*# sourceMappingURL=index.css.map */
