@@ -1,83 +1,56 @@
-
 @use "../Base/animate.scss";
 @use "../Abstract/variables";
 
-
-
-
-
 .header {
-    background-image: url("../premium_photo-1726743697632-5790d2ebf36b.avif");
-    /* background-size: cover; */
-    background-size: cover;
-    background-position: center;
-    height: 95vh;
-  
-    background-color: aqua;
-    position: relative;
-    /* clip-path: polygon(0 0, 100% 0, 100% 75px 0 100%); */
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100% );
+  background-image: url("../premium_photo-1726743697632-5790d2ebf36b.avif");
+  /* background-size: cover; */
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
 
- 
-    &_logo-box{
-      position: absolute;
-      top:1.25rem;
-      left:1.25rem;
-    
-    }
+  background-color: aqua;
+  position: relative;
+  /* clip-path: polygon(0 0, 100% 0, 100% 75px 0 100%); */
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
-    &-text-anchorbtn {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    
-    }
-
-    &__logo-image{
-  
-      height: 3.75rem;
-    
-    }
-
-
-    &__logo-image:hover{
-  
-      animation: MoveInLeftFromRight  3s;
-    
-    }
-
-
-    &-outdoor-text{
-      letter-spacing: 1rem;
-      font-size: 4rem;
-      /* font-weight:700; */
-      color: variables.$color-full-white-text;
-    
-      animation: MoveInRightFromLeft 2s ease-in;
-    
-    }
-
-
-    &-happen-text {
-      font-size: 1.5rem;
-      letter-spacing: 0.5rem;
-      font-weight: 200;
-      margin-bottom: 0.5rem;
-      color: variables.$color-full-white-text;
-    
-      animation: MoveInLeftFromRight 2s ease-in;
-  
-    
-
-
-  
+  &_logo-box {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
   }
-  
- 
-  
- 
-  
 
+  &-text-anchorbtn {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
+
+  &__logo-image {
+    height: 3.75rem;
+  }
+
+  &__logo-image:hover {
+    animation: MoveInLeftFromRight 3s;
+  }
+
+  &-outdoor-text {
+    letter-spacing: 1rem;
+    font-size: 4rem;
+    /* font-weight:700; */
+    color: variables.$color-full-white-text;
+
+    animation: MoveInRightFromLeft 2s ease-in;
+  }
+
+  &-happen-text {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+    color: variables.$color-full-white-text;
+
+    animation: MoveInLeftFromRight 2s ease-in;
+  }
+}

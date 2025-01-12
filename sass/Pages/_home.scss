@@ -54,3 +54,100 @@
   width: 50%;
   padding: 5rem;
 }
+
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  //Making Outer circle
+  &__button {
+    background-color: white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 3;
+  }
+
+  //making inner circle
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 2;
+
+    background-image: radial-gradient(
+      variables.$color-primary-light,
+      variables.$color-primary-dark
+    );
+    background-color: red;
+    transform: scale(100);
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    z-index: 2;
+    // background-color: red;
+    // display: none;
+  }
+
+  //centering to the navigation__nav
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    // background-color: yellow;
+  }
+
+  &__item {
+    margin: 2rem;
+
+    list-style-type: none;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      color: variables.$color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      text-decoration: none;
+
+      padding: 1rem 2rem;
+
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        variables.$color-white 50%
+      );
+
+      background-size: 230%;
+      transition: all 1s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: variables.$color-primary-dark;
+    }
+  }
+}
