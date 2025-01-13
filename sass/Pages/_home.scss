@@ -1,4 +1,7 @@
 @use "../Abstract/variables";
+
+
+
 .section-about {
   background-color: variables.$color-grey-light;
   padding: 10rem 0;
@@ -87,28 +90,37 @@
       variables.$color-primary-light,
       variables.$color-primary-dark
     );
-    background-color: red;
-    transform: scale(100);
+    // background-color: red;
+    // transform: scale(100);
   }
 
+  //making the width and height to center the nav__list
   &__nav {
     height: 100vh;
     width: 100%;
     position: fixed;
     top: 0;
     right: 0px;
-    z-index: 2;
     // background-color: red;
+    z-index: 2;
     // display: none;
+    opacity:0;
+    width:0;
+
+    // visibility: hidden;
   }
 
-  //centering to the navigation__nav
+  //centering to the items with relative to the screen(nearest parent)
   &__list {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 3;
+    // z-index:120;
+    // z-index: 120;
+    // display: none;
 
     // background-color: yellow;
   }
@@ -119,35 +131,50 @@
     list-style-type: none;
   }
 
-  &__link {
-    &:link,
-    &:visited {
-      display: inline-block;
-      font-size: 3rem;
-      font-weight: 300;
-      color: variables.$color-white;
-      text-decoration: none;
-      text-transform: uppercase;
+  &__link:link, :visited{
 
-      text-decoration: none;
+    text-decoration: none;
+    font-size: 2rem;
+    // background-color: blue;
+    padding: 1.2rem 2rem;
+    // margin:1rem;
 
-      padding: 1rem 2rem;
-
-      background-image: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 50%,
-        variables.$color-white 50%
-      );
-
-      background-size: 230%;
-      transition: all 1s;
-    }
-
-    &:hover,
-    &:active {
-      background-position: 100%;
-      color: variables.$color-primary-dark;
-    }
   }
+
+
+
+  &__checkbox:checked ~ &__nav{
+
+    // display: block;
+
+    // opacity: 1;
+
+    // display: block;
+    opacity:1;
+    width:100%;
+    // visibility: visible;
+
+  }
+
+  &__checkbox:checked ~ &__background{
+
+    transform: scale(100);
+
+
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -94,6 +94,7 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background-color: aqua;
 }
 .btn:active {
   transform: translateY(-1px);
@@ -133,7 +134,6 @@ body {
   position: absolute;
   z-index: 1;
   transition: all 0.3s;
-  z-index: 10;
   outline-offset: 1rem;
 }
 .composition__photo--p1 {
@@ -176,7 +176,7 @@ body {
   margin-bottom: 0.5rem;
 }
 .feature-box:hover {
-  transform: translateY(-1rem) scale(1.2);
+  transform: translateY(-1rem) scale(2);
 }
 
 .card {
@@ -201,6 +201,7 @@ body {
   background-color: orangered;
 }
 .card__side--back {
+  background-color: green;
   transform: rotateY(180deg);
 }
 .card__side--back-1 {
@@ -559,8 +560,6 @@ body {
   right: 6.5rem;
   z-index: 2;
   background-image: radial-gradient(#7ed56f, #28b485);
-  background-color: red;
-  transform: scale(100);
 }
 .navigation__nav {
   height: 100vh;
@@ -569,6 +568,8 @@ body {
   top: 0;
   right: 0px;
   z-index: 2;
+  opacity: 0;
+  width: 0;
 }
 .navigation__list {
   position: absolute;
@@ -576,27 +577,23 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 3;
 }
 .navigation__item {
   margin: 2rem;
   list-style-type: none;
 }
-.navigation__link:link, .navigation__link:visited {
-  display: inline-block;
-  font-size: 3rem;
-  font-weight: 300;
-  color: #ffffff;
+.navigation__link:link, .navigation :visited {
   text-decoration: none;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #ffffff 50%);
-  background-size: 230%;
-  transition: all 1s;
+  font-size: 2rem;
+  padding: 1.2rem 2rem;
 }
-.navigation__link:hover, .navigation__link:active {
-  background-position: 100%;
-  color: #28b485;
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(100);
 }
 
 .card-container {

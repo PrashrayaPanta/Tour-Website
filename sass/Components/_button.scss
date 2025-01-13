@@ -3,6 +3,7 @@
 
 
   .btn {
+    // background-color: red;
     padding: 2rem 3rem;
     display: inline-block;
     text-decoration: none;
@@ -27,14 +28,18 @@
 
       
   &:hover {
+    // background-color: red;
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    background-color: aqua;
   }
 
 
     
   &:active {
-    transform: translateY(-1px); .header_logo-image:hover{
+    transform: translateY(-1px); 
+    
+    .header_logo-image:hover{
   
       animation: MoveInLeftFromRight  3s;
     
