@@ -131,15 +131,39 @@
     list-style-type: none;
   }
 
-  &__link:link, :visited{
+  &__link{
 
-    text-decoration: none;
-    font-size: 2rem;
-    // background-color: blue;
-    padding: 1.2rem 2rem;
-    // margin:1rem;
+    &:link, &:visited{
+
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 400;
+      padding:1rem 2rem;
+      color:variables.$color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      //solid color gradient
+
+      background-image: linear-gradient(120deg, transparent 0%,  transparent 50% , variables.$color-white 50%);
+
+      background-size: 220%;
+      transition: all 0.4s;
+    }
+
+
+    &:hover, &:active{
+
+            background-position: 100%;
+
+            color: rgba(variables.$color-primary-light, 0.8)
+
+    }
+
 
   }
+
+
 
 
 
