@@ -23,11 +23,32 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 1200px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 1800px) {
+  html {
+    font-size: 80%;
+  }
+}
 
 body {
   /* padding:12px; */
   /* background-color: red; */
   padding: 0.75rem;
+  /* position: absolute; */
 }
 
 .u-center-text {

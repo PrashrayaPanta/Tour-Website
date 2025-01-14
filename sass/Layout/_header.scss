@@ -22,7 +22,7 @@
   }
 
   &-text-anchorbtn {
-    @include mixins.absCenter($top:40%);
+    @include mixins.absCenter(40%);
     text-align: center;
   }
 
