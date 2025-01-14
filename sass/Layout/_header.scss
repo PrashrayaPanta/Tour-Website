@@ -1,6 +1,8 @@
 @use "../Base/animate.scss";
 @use "../Abstract/variables";
 
+@use "../Abstract/mixins";
+
 .header {
   background-image: url("../premium_photo-1726743697632-5790d2ebf36b.avif");
   /* background-size: cover; */
@@ -20,10 +22,7 @@
   }
 
   &-text-anchorbtn {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include mixins.absCenter($top:40%);
     text-align: center;
   }
 

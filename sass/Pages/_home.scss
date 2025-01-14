@@ -1,6 +1,9 @@
 @use "../Abstract/variables";
 
 
+@use "../Abstract/mixins";
+
+
 
 .section-about {
   background-color: variables.$color-grey-light;
@@ -73,6 +76,8 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 3;
+    background-color: red;
+    text-align: center;
   }
 
   //making inner circle
@@ -90,6 +95,8 @@
       variables.$color-primary-light,
       variables.$color-primary-dark
     );
+
+    transition: transform 0.8s cubic-bezier(.81,.3,.28,.95);
     // background-color: red;
     // transform: scale(100);
   }
@@ -107,15 +114,16 @@
     opacity:0;
     width:0;
 
+    transition: all 0.8s;
+
     // visibility: hidden;
   }
 
   //centering to the items with relative to the screen(nearest parent)
   &__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    
+    // @include mixins.absCenter;
+    @include mixins.absCenter($top:50%);
     text-align: center;
     z-index: 3;
     // z-index:120;
@@ -183,6 +191,53 @@
   &__checkbox:checked ~ &__background{
 
     transform: scale(100);
+
+
+  }
+
+
+  &__icon{
+
+
+    // background-color: red;
+
+
+    position: relative;
+
+    margin-top: 3rem;
+
+
+      &,
+      &::before, &::after{
+
+        width:3rem;
+        height:2px;
+        background-color: variables.$color-primary-dark;
+        display: inline-block;
+
+      } 
+
+      &::before, &::after{
+
+          content:"";
+
+          position: absolute;
+
+          left:0;
+
+      }
+
+
+      &::before{
+
+        top:-0.8rem;
+
+      }
+
+
+      &::after{
+        top:0.8rem;
+      }
 
 
   }
