@@ -4,16 +4,35 @@
 @use "../Abstract/mixins";
 
 .header {
+
+
+
   background-image: url("../premium_photo-1726743697632-5790d2ebf36b.avif");
   /* background-size: cover; */
   background-size: cover;
-  background-position: center;
+  // background-position: center;
   height: 95vh;
+
+
+
 
   background-color: aqua;
   position: relative;
-  /* clip-path: polygon(0 0, 100% 0, 100% 75px 0 100%); */
   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+
+
+  @include mixins.respond(tab-landscape) {
+
+    background-position: center;
+
+
+  }
+
+
+
+
+
 
   &_logo-box {
     position: absolute;
@@ -22,8 +41,8 @@
   }
 
   &-text-anchorbtn {
-    @include mixins.absCenter(40%);
     text-align: center;
+    @include mixins.absCenter(40%);
   }
 
   &__logo-image {
@@ -35,12 +54,24 @@
   }
 
   &-outdoor-text {
+
+
+
+
     letter-spacing: 1rem;
     font-size: 4rem;
+
+
+
     /* font-weight:700; */
     color: variables.$color-full-white-text;
-
     animation: MoveInRightFromLeft 2s ease-in;
+
+    @include mixins.respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+
+
   }
 
   &-happen-text {
@@ -51,5 +82,10 @@
     color: variables.$color-full-white-text;
 
     animation: MoveInLeftFromRight 2s ease-in;
+
+    // @include mixins.respond(phone) {
+    //   letter-spacing: 0.5rem;
+    // }
+
   }
 }

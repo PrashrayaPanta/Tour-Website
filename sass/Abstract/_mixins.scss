@@ -1,6 +1,6 @@
 @mixin clearfix {
 
-    &::after{
+    &::after {
 
         content: "";
         display: table;
@@ -14,10 +14,10 @@
     top: $top;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
 
 
-  //Media Query Manager
+//Media Query Manager
 
 //   Breakpoint
 
@@ -32,14 +32,6 @@
 // 1800px + Big Desktop
 
 
-@mixin respond-phone {
-
-    @media (max-width: 600px){
-      @content;
-    };
-
-}
-
 // Btreakpoinyt arugment choice
 
 
@@ -52,36 +44,42 @@
 // -big-desktop
 
 
-@mixin respond($breakpoint){
 
-    @if $breakpoint == phone {
+//1em = 16px
+@mixin respond($breakpoint) {
 
-        @media (max-width: 600px){
+    @if $breakpoint ==phone {
+
+        @media (max-width: 37.5em) {
+            //600px
             @content;
         }
 
     }
 
-    @if $breakpoint == tab-port {
+    @if $breakpoint ==tab-port {
 
-        @media (max-width: 900px){
+        @media (max-width: 56.35em) {
+            //900px
             @content;
         }
-        
+
     }
 
-    @if $breakpoint == tab-landscape {
+    @if $breakpoint ==tab-landscape {
 
-        @media (max-width: 1200px){
+        @media (max-width: 75em) {
+
             @content;
         }
-        
+
     }
 
 
-    @if $breakpoint == big-desktop {
+    @if $breakpoint ==big-desktop {
 
-        @media (min-width: 1800px){
+
+        @media (min-width: 112.5em) {
             @content;
         }
 
@@ -89,5 +87,3 @@
 
 
 }
-
-
