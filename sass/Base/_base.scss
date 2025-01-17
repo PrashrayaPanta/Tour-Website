@@ -14,13 +14,14 @@ html {
   font-size: 62.5%;
 
 
-
+  // less than equal to 1200
   @include mixins.respond(tab-landscape) {
 
     font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
 
   }
 
+  //less than equal to 900
 
   @include mixins.respond(tab-port) {
 
@@ -29,6 +30,8 @@ html {
   }
 
 
+
+  //less than equal to 600
   @include mixins.respond(phone) {
 
     font-size: 40%; //1rem = 4.8
@@ -69,5 +72,4 @@ body {
 
 
 
-  /* position: absolute; */
 }

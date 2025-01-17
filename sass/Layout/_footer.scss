@@ -1,4 +1,5 @@
 @use "../Abstract/variables";
+
 .footer {
   background-color: variables.$color-grey-dark-2;
   padding: 10rem 0;
@@ -37,6 +38,7 @@
   }
 
   &__link {
+
     &:link,
     &:visited {
       color: variables.$color-grey-light;
