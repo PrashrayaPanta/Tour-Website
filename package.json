@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.83.0"
+    "@tailwindcss/cli": "^4.0.17",
+    "sass": "^1.83.0",
+    "tailwindcss": "^4.0.17"
   }
 }

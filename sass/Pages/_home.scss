@@ -97,6 +97,8 @@
     background-image: radial-gradient(variables.$color-primary-light,
         variables.$color-primary-dark );
 
+    // background-color: variables.$color-primary-light;
+
     transition: transform 0.8s cubic-bezier(.81, .3, .28, .95);
     // background-color: red;
     // transform: scale(100);
@@ -122,6 +124,7 @@
     // display: none;
     opacity: 0;
     width: 0;
+
 
     transition: all 0.8s;
 

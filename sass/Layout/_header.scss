@@ -32,16 +32,9 @@
 
 
   @include mixins.respond(phone) {
-
-
-
     clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 95%);
 
   }
-
-
-
-
 
 
   &_logo-box {

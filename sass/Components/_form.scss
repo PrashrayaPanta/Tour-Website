@@ -43,7 +43,7 @@
     transition: all 0.3s;
   }
 
-  &__input:placeholder-shown + &__label {
+  &__input:placeholder-shown+&__label {
     // opacity: 0;
     // visibility: hidden;
 
@@ -95,7 +95,7 @@
 
   // + Ajacent sibling selector
 
-  &__radio-input:checked + &__radio-label &__radio-button::after {
+  &__radio-input:checked+&__radio-label &__radio-button::after {
     content: "";
     width: 1rem;
     height: 1rem;
